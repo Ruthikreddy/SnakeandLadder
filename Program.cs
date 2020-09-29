@@ -13,19 +13,25 @@ namespace SnakeandLadder
             int presentPosition = 0;
             
             Random random = new Random();
-            int numberOnDie = random.Next(1, 7);
-            int CheckOption = random.Next(0, 3);
-            switch (CheckOption)
+            while (presentPosition <100)
             {
-                case 0:
-                    break;
-                case 1:
-                    presentPosition += numberOnDie;
-                    break;
-                case 2:
-                    presentPosition -= numberOnDie;
-                    break;
+                int numberOnDie = random.Next(1, 7);
+                int CheckOption = random.Next(0, 3);
+                switch (CheckOption)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        presentPosition += numberOnDie;
+                        break;
+                    case 2:
+                        presentPosition -= numberOnDie;
+                        break;
+                        if (presentPosition <= 0)
+                            presentPosition = 0;
 
+                }
+                
             }
             Console.WriteLine(presentPosition);
         }
