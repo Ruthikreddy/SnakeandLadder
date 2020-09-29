@@ -23,15 +23,18 @@ namespace SnakeandLadder
                         break;
                     case 1:
                         presentPosition += numberOnDie;
+                        if (presentPosition + numberOnDie <= 100)
+                            presentPosition += numberOnDie;
                         break;
                     case 2:
                         presentPosition -= numberOnDie;
                         break;
-                        if (presentPosition <= 0)
-                            presentPosition = 0;
+                        
 
                 }
-                
+                if (presentPosition <= 0)
+                    presentPosition = 0;
+
             }
             Console.WriteLine(presentPosition);
         }
